@@ -27,6 +27,5 @@ const Main = styled.main`
   margin: 0px auto;
   padding: 14px 16px 32px;
   background-color: transparent;
-  box-sizing: border-box;
   width: 100%;
 `;
