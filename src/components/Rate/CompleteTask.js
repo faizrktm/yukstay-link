@@ -1,20 +1,50 @@
 import React from 'react';
-import { Box, Text } from 'grommet';
+import { Anchor, Box, Text } from 'grommet';
 import styled from 'styled-components';
 
 import Card from 'components/Card';
+import CardImage from 'components/CardImage';
 
+const PostRateUnitCard = () => (
+  <CardImage image="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg">
+    <Text weight="bold">Thank you for your feedback</Text>
+    <Box margin={{ top: '8px' }}><Text>It will be really helpful for us to provide you with a better service</Text></Box>
+    <Box
+      margin={{ top: '16px' }}
+      pad={{ vertical: '12px', horizontal: '16px' }}
+      round="8px"
+      border={{ color: 'borderGrey', size: '1px', style: 'solid' }}
+    >
+      <Text weight="bold">We got more units!</Text>
+      <Box margin={{ top: '10px' }}>
+        <Text>Search a place near your office or city center, we only provide the best unit for you</Text>
+      </Box>
+      <Box alignSelf="end" margin={{ top: '12px' }}>
+        <Anchor href="#" size="small" label="Leave a review" />
+      </Box>
+    </Box>
+  </CardImage>
+);
 
-const PrerateCard = () => (
-  <CardContainer>
-    <CardFigureCanvas>
-      <CardImageCanvas src="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg"/>
-    </CardFigureCanvas>
-    <CardContent>
-      <Text weight="bold">Thank you for your feedback</Text>
-      <Text>It will be really helpful for us to provide you with a better service</Text>
-    </CardContent>
-  </CardContainer>
+const PostRateAgentCard = () => (
+  <CardImage image="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg">
+    <Text weight="bold">Thank you for your feedback</Text>
+    <Box margin={{ top: '8px' }}><Text>It will be really helpful for us to provide you with a better service</Text></Box>
+    <Box
+      margin={{ top: '16px' }}
+      pad={{ vertical: '12px', horizontal: '16px' }}
+      round="8px"
+      border={{ color: 'borderGrey', size: '1px', style: 'solid' }}
+    >
+      <Text weight="bold">Enjoy using Yukstay?</Text>
+      <Box margin={{ top: '10px' }}>
+        <Text>We’d love your feedback! Consider leaving a review for our app on the store!</Text>
+      </Box>
+      <Box alignSelf="end" margin={{ top: '12px' }}>
+        <Anchor href="#" size="small" label="Leave a review" />
+      </Box>
+    </Box>
+  </CardImage>
 );
 
 const CompleteTask = () => (
@@ -27,10 +57,8 @@ const CompleteTask = () => (
       </Box>
     </Box>
     <Wrapper>
-      <PrerateCard />
-      <PrerateCard />
-      <PrerateCard />
-      <PrerateCard />
+      <PostRateAgentCard />
+      <PostRateUnitCard />
     </Wrapper>
   </Card>
 );
@@ -51,30 +79,4 @@ const Wrapper = styled.div`
     content: '';
     width: 16px;
   }
-`;
-
-const CardContainer = styled(Card)`
-  scroll-snap-align: center;
-`;
-
-const CardFigureCanvas = styled.figure`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px;
-`;
-
-const CardImageCanvas = styled.img`
-  width: 100%;
-  height: 154px;
-  object-fit: cover;
-  border-radius: 8px 8px 0px 0px;
-`;
-
-const CardContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px 8px 0px 0px;
-  padding: 16px;
 `;

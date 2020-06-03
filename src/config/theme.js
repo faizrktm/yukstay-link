@@ -13,6 +13,7 @@ const theme = deepMerge(grommet, {
       },
       textGrey: '#98A4AE',
       grey: '#f9f9f9',
+      borderGrey: '#D3D3D3',
     },
     font: {
       family: 'Sarabun, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif',
