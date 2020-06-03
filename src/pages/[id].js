@@ -13,14 +13,4 @@ const Rate = ({ language }) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  const { params } = context;
-  console.log(params.id); // use params.id to fetch api decode.
-  return {
-    props: {
-      language: 'en',
-    }
-  }
-}
-
 export default Rate;

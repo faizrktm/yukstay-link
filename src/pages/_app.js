@@ -1,3 +1,4 @@
+import App from 'next/app';
 import React from 'react';
 import styled from 'styled-components';
 import { Grommet } from 'grommet';
@@ -15,6 +16,18 @@ function MyApp({ Component, pageProps }) {
       </Main>
     </Grommet>
   )
+}
+
+MyApp.getInitialProps = async (appContext) => {
+  // calls page's `getInitialProps` and fills `appProps.pageProps`
+  const { query } = appContext;
+  // decode query.id to get information about user using decode API.
+  const appProps = await App.getInitialProps(appContext);
+  appProps.pageProps = {
+    language: 'en', // only example
+  };
+
+  return { ...appProps };
 }
 
 export default MyApp;
