@@ -2,11 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { selectColor } from 'helper/theme';
-import { Text } from 'grommet';
+import { Box, Image, Text } from 'grommet';
 
 const Header = () => (
   <Container>
     <Wrapper>
+      <Box
+        width="59px"
+        height="20px"
+      >
+        <Image
+          fit="contain"
+          src="/images/yukstay_logo.png"
+          alt="Yukstay Link"
+          fill
+        />
+      </Box>
       <Text color="white" weight="bold" size="large">Hi, Ludy Chatry</Text>
     </Wrapper>
   </Container>

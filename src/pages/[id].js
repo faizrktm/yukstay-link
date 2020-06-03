@@ -1,13 +1,13 @@
 import React from 'react';
 
-import CompleteTask from 'components/Rate/CompleteTask';
+import Viewing from 'components/Rate/Viewing';
 import { TranslateProvider } from 'helper/translate';
 
 const Rate = ({ language }) => {
   return (
     <TranslateProvider lang={language}>
       <div>
-        <CompleteTask />
+        <Viewing />
       </div>
     </TranslateProvider>
   );

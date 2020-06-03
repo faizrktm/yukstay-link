@@ -54,7 +54,7 @@ const PostRateAgentCard = () => {
   );
 };
 
-const CompleteTask = () => {
+const Viewing = () => {
   const { t } = useContext(TranslateContext);
   return(
     <Card>
@@ -73,7 +73,7 @@ const CompleteTask = () => {
   )
 };
 
-export default CompleteTask;
+export default Viewing;
 
 const Wrapper = styled.div`
   display: grid;
