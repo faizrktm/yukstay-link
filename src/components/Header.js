@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { selectColor } from 'helper/theme';
 import { Box, Image, Text } from 'grommet';
 
-const Header = () => (
+const Header = ({ name }) => (
   <Container>
     <Wrapper>
       <Box
@@ -18,7 +18,7 @@ const Header = () => (
           fill
         />
       </Box>
-      <Text color="white" weight="bold" size="large">Hi, Ludy Chatry</Text>
+      <Text color="white" weight="bold" size="large">Hi, {name || 'Guest'}</Text>
     </Wrapper>
   </Container>
 );
