@@ -4,6 +4,7 @@ import { Box } from 'grommet';
 import RateViewing from 'components/Tenant/RateViewing';
 import ScheduledViewing from 'components/Tenant/ScheduledViewing';
 import Page from 'components/Page';
+import Contact from 'components/Contact';
 import { TranslateProvider } from 'helper/translate';
 
 const Rate = ({ language, name, errorCode }) => {
@@ -17,6 +18,7 @@ const Rate = ({ language, name, errorCode }) => {
         <Box margin={{ top: '14px' }}>
           <RateViewing />
         </Box>
+        <Contact />
       </TranslateProvider>
     </Page>
   );
@@ -28,7 +30,7 @@ export async function getServerSideProps(context){
   return {
     props: {
       errorCode: false,
-      language: 'en',
+      language: 'id',
       name: 'Faiz Azmi Rekatama'
     },
   }
