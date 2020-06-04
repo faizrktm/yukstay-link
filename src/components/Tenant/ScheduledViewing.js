@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Box, Text } from "grommet";
+import { Anchor, Box, Text, Image } from "grommet";
 import { Calendar, Location } from "grommet-icons";
 import styled from "styled-components";
 
@@ -25,6 +25,19 @@ const ScheduledViewing = () => {
           <Text size="small" weight="bold">Indra Lesmana</Text>
           <Text size="xsmall">Yukstay Agent</Text>
         </Box>
+        <Anchor href="#">
+          <Box
+            width="24px"
+            height="24px"
+          >
+            <Image
+              fit="contain"
+              src="/images/whatsapp_green.svg"
+              alt="Contact Agent"
+              fill
+            />
+          </Box>
+        </Anchor>
       </BorderedCard>
       <BorderedCard margin={{ top: '8px' }}>
         <Box direction="row" align="center">
