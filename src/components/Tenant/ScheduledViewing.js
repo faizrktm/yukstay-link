@@ -6,6 +6,8 @@ import styled from "styled-components";
 import Card from "components/Card";
 import BorderedCard from "components/BorderedCard";
 import { TranslateContext } from "helper/translate";
+import createWhatsappLink from "helper/whatsapp";
+import constants from "config/constants";
 
 const ScheduledViewing = () => {
   const { t } = useContext(TranslateContext);
@@ -25,7 +27,7 @@ const ScheduledViewing = () => {
           <Text size="small" weight="bold">Indra Lesmana</Text>
           <Text size="xsmall">Yukstay Agent</Text>
         </Box>
-        <Anchor href="#">
+        <Anchor href={createWhatsappLink(constants.CONTACT_PERSON)}>
           <Box
             width="24px"
             height="24px"

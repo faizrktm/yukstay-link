@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Box, Button, Text, Image } from "grommet";
 
 import { TranslateContext } from "helper/translate";
+import constants from "config/constants";
+import createWhatsappLink from "helper/whatsapp";
 
 const WhatsappIcon = () => (
   <Box
@@ -29,6 +31,7 @@ const Contact = () => {
           gap="xsmall"
           label={<Text color="brand">{t('contact')}</Text>}
           icon={<WhatsappIcon />}
+          href={createWhatsappLink(constants.CONTACT_PERSON)}
         />
       </Box>
     </Box>
