@@ -61,6 +61,35 @@ const PostRateAgentCard = () => {
   );
 };
 
+const PreRateUnitCard = () => {
+  const { t } = useContext(TranslateContext);
+  return(
+    <CardImage image="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg">
+      <Box
+        round="8px"
+        pad={{ vertical: '8px', horizontal: '14px' }}
+        border={{ color: 'borderGrey', size: '1px', style: 'solid' }}
+      >
+        <Text size="small" weight="bold">Sudirman Residence</Text>
+        <Text size="xsmall">Tower Mawar Floor 32 Unit 8</Text>
+      </Box>
+      <Box margin={{top: '16px'}}>
+        <Text weight="bold">{t('how_unit')}</Text>
+        <Box pad={{ top: '8px' }}>
+          <StarRating max={5} />
+        </Box>
+        <Box pad={{ vertical: '16px' }}>
+          <TextInput
+            placeholder={t('share_thought')}
+            size="medium"
+          />
+        </Box>
+        <Button primary label="Submit" />
+      </Box>
+    </CardImage>
+  );
+};
+
 const PreRateAgentCard = () => {
   const { t } = useContext(TranslateContext);
   return(
@@ -103,6 +132,7 @@ const Viewing = () => {
       </Box>
       <Wrapper>
         <PreRateAgentCard />
+        <PreRateUnitCard />
         <PostRateAgentCard />
         <PostRateUnitCard />
       </Wrapper>
