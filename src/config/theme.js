@@ -11,13 +11,30 @@ const theme = deepMerge(grommet, {
         light: '#3A464F',
         dark: 'white',
       },
-      textGrey: '#98A4AE',
       grey: '#f9f9f9',
       borderGrey: '#D3D3D3',
+      softGrey: '#ECECEC',
+      gold: '#EFCE4A',
+      placeholder: '#98A4AE'
     },
     font: {
       family: 'Sarabun, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif',
     },
+    input: {
+      weight: 'normal',
+      font: {
+        weight: 'normal'
+      },
+      padding: {
+        horizontal: '16px',
+        vertical: '8px'
+      }
+    },
+    control: {
+      border: {
+        radius: '8px'
+      }
+    }
   },
   text: {
     small: {
@@ -32,6 +49,14 @@ const theme = deepMerge(grommet, {
       size: '24px',
       height: '36px'
     },
+  },
+  button: {
+    padding: {
+      vertical: '8px'
+    },
+    border: {
+      radius: '8px'
+    }
   }
 });
 
