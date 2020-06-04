@@ -1,10 +1,17 @@
 import { useContext } from 'react';
-import { Anchor, Box, Text } from 'grommet';
+import {
+  Anchor,
+  Box,
+  Button,
+  Text,
+  TextInput,
+} from 'grommet';
 import styled from 'styled-components';
 
 import { TranslateContext } from 'helper/translate';
 import Card from 'components/Card';
 import CardImage from 'components/CardImage';
+import StarRating from './StarRating';
 
 const PostRateUnitCard = () => {
   const { t } = useContext(TranslateContext);
@@ -54,6 +61,35 @@ const PostRateAgentCard = () => {
   );
 };
 
+const PreRateAgentCard = () => {
+  const { t } = useContext(TranslateContext);
+  return(
+    <CardImage image="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg">
+      <Box
+        round="8px"
+        pad={{ vertical: '8px', horizontal: '14px' }}
+        border={{ color: 'borderGrey', size: '1px', style: 'solid' }}
+      >
+        <Text size="small" weight="bold">Indra Lesmana</Text>
+        <Text size="xsmall">Yukstay Agent</Text>
+      </Box>
+      <Box margin={{top: '16px'}}>
+        <Text weight="bold">{t('how_agent')}</Text>
+        <Box pad={{ top: '8px' }}>
+          <StarRating max={5} />
+        </Box>
+        <Box pad={{ vertical: '16px' }}>
+          <TextInput
+            placeholder={t('share_thought')}
+            size="medium"
+          />
+        </Box>
+        <Button primary label="Submit" />
+      </Box>
+    </CardImage>
+  );
+};
+
 const Viewing = () => {
   const { t } = useContext(TranslateContext);
   return(
@@ -62,10 +98,11 @@ const Viewing = () => {
         <Box background="softBlue" width="40px" height="40px" round="8px" />
         <Box margin={{ left: '8px' }}>
           <Text size="small" weight="bold">{t('viewing_completed')}</Text>
-          <Text size="xsmall" color="textGrey">1 Jan 2020, 15:30</Text>
+          <Text size="xsmall" color="placeholder">1 Jan 2020, 15:30</Text>
         </Box>
       </Box>
       <Wrapper>
+        <PreRateAgentCard />
         <PostRateAgentCard />
         <PostRateUnitCard />
       </Wrapper>
