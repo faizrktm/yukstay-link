@@ -5,7 +5,7 @@ import 'styles/normalize.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Grommet theme={theme} background="grey" full>
+    <Grommet theme={theme} background="grey">
       <Component {...pageProps} />
     </Grommet>
   )
