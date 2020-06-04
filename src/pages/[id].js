@@ -1,6 +1,8 @@
 import Error from 'next/error';
+import { Box } from 'grommet';
 
-import Viewing from 'components/Rate/Viewing';
+import RateViewing from 'components/Tenant/RateViewing';
+import ScheduledViewing from 'components/Tenant/ScheduledViewing';
 import Page from 'components/Page';
 import { TranslateProvider } from 'helper/translate';
 
@@ -11,7 +13,10 @@ const Rate = ({ language, name, errorCode }) => {
   return (
     <Page title="Viewing Report" username={name}>
       <TranslateProvider lang={language}>
-        <Viewing />
+        <ScheduledViewing />
+        <Box margin={{ top: '14px' }}>
+          <RateViewing />
+        </Box>
       </TranslateProvider>
     </Page>
   );

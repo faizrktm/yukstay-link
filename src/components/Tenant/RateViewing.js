@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
 } from 'grommet';
+import { View } from 'grommet-icons';
 import styled from 'styled-components';
 
 import { TranslateContext } from 'helper/translate';
@@ -124,7 +125,9 @@ const Viewing = () => {
   return(
     <Card>
       <Box direction="row" align="center" pad={{ horizontal: '16px', top: '16px', bottom: '14px' }}>
-        <Box background="softBlue" width="40px" height="40px" round="8px" />
+        <Box background="softBlue" width="40px" height="40px" round="8px" align="center" justify="center">
+          <View color="white" size="23px" />
+        </Box>
         <Box margin={{ left: '8px' }}>
           <Text size="small" weight="bold">{t('viewing_completed')}</Text>
           <Text size="xsmall" color="placeholder">1 Jan 2020, 15:30</Text>
@@ -149,6 +152,7 @@ const Wrapper = styled.div`
   grid-auto-flow: column;
   grid-auto-columns: 275px;
   overflow-x: scroll;
+  overflow-y: hidden;
   scroll-snap-type: x proximity;
   padding-bottom: 16px;
   :before,
