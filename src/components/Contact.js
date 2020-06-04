@@ -22,7 +22,7 @@ const WhatsappIcon = () => (
 const Contact = () => {
   const { t } = useContext(TranslateContext);
   return(
-    <Box align="center" margin={{ top: '8px' }}>
+    <Box align="center" margin={{ top: '16px' }}>
       <Box margin={{ bottom: '8px' }}><Text size="xsmall">{t('problem')}</Text></Box>
       <Box alignSelf="stretch">
         <Button

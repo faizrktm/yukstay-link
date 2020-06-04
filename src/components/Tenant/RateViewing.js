@@ -13,6 +13,8 @@ import { TranslateContext } from 'helper/translate';
 import Card from 'components/Card';
 import CardImage from 'components/CardImage';
 import StarRating from './StarRating';
+import useDetectDevice from 'helper/device';
+import constants from 'config/constants';
 
 const PostRateUnitCard = () => {
   const { t } = useContext(TranslateContext);
@@ -31,7 +33,7 @@ const PostRateUnitCard = () => {
           <Text>{t('search')}</Text>
         </Box>
         <Box alignSelf="end" margin={{ top: '12px' }}>
-          <Anchor href="#" size="small" label={t('explore')} />
+          <Anchor href="https://www.yukstay.com" size="small" label={t('explore')} />
         </Box>
       </Box>
     </CardImage>
@@ -40,6 +42,7 @@ const PostRateUnitCard = () => {
 
 const PostRateAgentCard = () => {
   const { t } = useContext(TranslateContext);
+  const device = useDetectDevice();
   return(
     <CardImage image="https://yukstay-uploads.s3.ap-southeast-1.amazonaws.com/spaces%2Ff95f8d76-f974-424b-8d6f-b857be34df79%2Ffd89a7da-adbb-4c7d-bdb1-d47ad1751fa6%2Flarge.jpg">
       <Text weight="bold">{t('feedback')}</Text>
@@ -55,7 +58,7 @@ const PostRateAgentCard = () => {
           <Text>{t('review')}</Text>
         </Box>
         <Box alignSelf="end" margin={{ top: '12px' }}>
-          <Anchor href="#" size="small" label={t('leave_review')} />
+          <Anchor href={constants.STORE[device]} size="small" label={t('leave_review')} />
         </Box>
       </Box>
     </CardImage>
