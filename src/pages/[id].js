@@ -1,16 +1,26 @@
-import React from 'react';
-
 import Viewing from 'components/Rate/Viewing';
+import Page from 'components/Page';
 import { TranslateProvider } from 'helper/translate';
 
-const Rate = ({ language }) => {
+const Rate = ({ language, name }) => {
   return (
-    <TranslateProvider lang={language}>
-      <div>
+    <Page title="Viewing Report" username={name}>
+      <TranslateProvider lang={language}>
         <Viewing />
-      </div>
-    </TranslateProvider>
+      </TranslateProvider>
+    </Page>
   );
 };
+
+export async function getServerSideProps(context){
+  const { params } = context;
+  console.log(params.id);
+  return {
+    props: {
+      language: 'en',
+      name: 'Faiz Azmi Rekatama'
+    },
+  }
+}
 
 export default Rate;

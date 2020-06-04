@@ -1,3 +1,5 @@
+import { Text } from "grommet";
+
 export default function Home() {
-  return null
+  return <Text>Home</Text>
 }
