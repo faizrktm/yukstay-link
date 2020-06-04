@@ -85,7 +85,7 @@ const PreRateUnitCard = () => {
             size="medium"
           />
         </Box>
-        <Button primary label="Submit" />
+        <Button primary label={t('submit')} />
       </Box>
     </CardImage>
   );
@@ -114,7 +114,7 @@ const PreRateAgentCard = () => {
             size="medium"
           />
         </Box>
-        <Button primary label="Submit" />
+        <Button primary label={t('submit')} />
       </Box>
     </CardImage>
   );

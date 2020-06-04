@@ -2,16 +2,17 @@
   "viewing_schedule": "Kamu punya jadwal viewing",
   "viewing_completed": "Kamu telah menyelesaikan viewing",
   "share_thought": "Ceritakan pengalamanmu...",
-  "how_agent": "Seberapa baik agent kami membantu anda?",
+  "how_agent": "Seberapa baik agent kami membantu kamu?",
   "how_unit": "Bagaimana menurutmu tentang unitnya?",
   "problem": "Butuh Bantuan?",
   "contact": "Hubungi CS YukStay",
   "feedback": "Terima kasih feedback nya!",
-  "service": "Feedback anda sangat membantu kami untuk memberikan pelayanan yang lebih baik",
+  "service": "Feedback kamu sangat membantu kami untuk memberikan pelayanan yang lebih baik",
   "units": "Kami punya banyak unit!",
   "search": "Cari unit dekat kantor atau pusat kota, temukan unit yang cocok untukmu!",
   "explore": "Explore Yukstay",
-  "enjoy": "Enjoy using YukStay?",
-  "review": "We’d love your feedback! Consider leaving a review for our app on the store!",
-  "leave_review": "Review Yukstay App"
+  "enjoy": "Suka dengan YukStay?",
+  "review": "Kami ingin dengar lebih banyak feedback!\n Jangan lupa berikan review untuk kami di app store!",
+  "leave_review": "Review YukStay App",
+  "submit": "Kirim"
 }
